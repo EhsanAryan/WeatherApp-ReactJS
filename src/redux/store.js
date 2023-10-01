@@ -1,7 +1,10 @@
-import { applyMiddleware , createStore } from "redux";
 import weatherReducer from "./weatherReducer/weatherReducer";
 import thunk from "redux-thunk";
+import { configureStore } from "@reduxjs/toolkit";
 
-const store = createStore(weatherReducer , applyMiddleware(thunk));
+const store = configureStore({
+    reducer: weatherReducer,
+    middleware: [thunk]
+})
 
 export default store;

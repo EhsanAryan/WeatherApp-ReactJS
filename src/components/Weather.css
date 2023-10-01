@@ -1,25 +1,26 @@
 .app {
     width: 100%;
     min-height: 100vh;
+    padding: 0px 15px;
 }
 
 .bg-cold {
-    background: url('../Pics/compressjpeg/cold.jpg') no-repeat fixed bottom;
+    background: url('../../public/assets/images/background/cold.jpg') no-repeat fixed bottom;
     background-size: cover;
 }
 
 .bg-usual {
-    background: url('../Pics/compressjpeg/usual.jpg') no-repeat fixed center;
+    background: url('../../public/assets/images/background/usual.jpg') no-repeat fixed center;
     background-size: cover;
 }
 
 .bg-warm {
-    background: url('../Pics/compressjpeg/warm.jpg') no-repeat fixed center;
+    background: url('../../public/assets/images/background/warm.jpg') no-repeat fixed center;
     background-size: cover;
 }
 
 .bg-hot {
-    background: url('../Pics/compressjpeg/hot2.jpg') no-repeat fixed center;
+    background: url('../../public/assets/images/background/hot.jpg') no-repeat fixed center;
     background-size: cover;
 }
 
@@ -33,6 +34,7 @@
     backdrop-filter: blur(2px);
     box-shadow: 0px 0px 10px black;
     border-radius: 10px;
+    width: 100%;
 }
 
 .city-input {
@@ -43,12 +45,12 @@
     text-align: center;
     padding: 5px 3px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .city-input::placeholder {
     font-family: 'BYekan' !important;
-    font-size:30px;
+    font-size: 26px;
 }
 
 .city-input:focus {
@@ -58,12 +60,12 @@
 }
 
 .show-temp {
-    height: 150px;
-    line-height: 150px;
-    font-size: 3.5rem;
+    height: 130px;
+    line-height: 130px;
+    font-size: 3rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
     border-radius: 10px;
-    background: linear-gradient(45deg , #00CCFFA4 10% , #008080A4 50% , #00CCFFA4 90%);
+    background: linear-gradient(45deg , #00CCFFD4 10% , #008080D4 50% , #00CCFFD4 90%);
     box-shadow: 0px 0px 15px black;
 }
 
@@ -74,15 +76,20 @@
 }
 
 .weather {
-    font-size: 36px;
+    font-size: 34px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(0, 82, 82);
     padding: 5px 0px;
     border-bottom: 2px solid rgb(0, 82, 82);
 }
 
-
 .my-spinner {
     width: 60px;
     height: 60px;
+}
+
+@media screen and (min-width: 768px) {
+    .parent-div {
+        width: 75%;
+    }
 }

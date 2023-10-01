@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import moment from "moment-jalaali";
 
-
 const daysOfWeek = [
     "یکشنبه" ,
     "دوشنبه" ,
@@ -27,7 +26,6 @@ const monthsOfYear = [
     "بهمن" ,
     "اسفند" ,
 ]
-
 
 const DateAndHour = () => {
 
