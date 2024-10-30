@@ -28,7 +28,6 @@ const monthsOfYear = [
 ]
 
 const DateAndHour = () => {
-
     const [date , setDate] = useState("");
     const [time , setTime] = useState("");
 
