@@ -42,7 +42,8 @@ const Weather = () => {
     }
 
     const getWeatherLatLon = () => {
-        const numberPattern = /^\d+(\.\d+)?$/;
+        const latNumber = Number(lat);
+        const lonNumber = Number(lon);
         if (lat === "" || lon === "") {
             swal({
                 title: "خطا",
@@ -51,7 +52,7 @@ const Weather = () => {
                 button: "متوجه شدم"
             })
             return;
-        } else if (!numberPattern.test(lat) || !numberPattern.test(lon)) {
+        } else if (!Number.isNaN(latNumber) || !Number.isNaN(lonNumber)) {
             swal({
                 title: "خطا",
                 text: "لطفا در فیلدها، فقط عدد وارد کنید!",
@@ -59,8 +60,24 @@ const Weather = () => {
                 button: "متوجه شدم"
             });
             return;
+        } else if (latNumber > 90 || latNumber < -90) {
+            swal({
+                title: "خطا",
+                text: "طول جغرافیایی باید یک عدد از 90 تا -90 باشد.",
+                icon: "error",
+                button: "متوجه شدم"
+            });
+            return;
+        } else if (lonNumber > 180 || lonNumber < -180) {
+            swal({
+                title: "خطا",
+                text: "عرض جغرافیایی باید یک عدد از 180 تا -180 باشد.",
+                icon: "error",
+                button: "متوجه شدم"
+            });
+            return;
         }
-        
+
         dispatch(handleWeatherAPILatLon(lat, lon));
         setLat("");
         setLon("");
