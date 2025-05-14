@@ -52,7 +52,7 @@ const Weather = () => {
                 button: "متوجه شدم"
             })
             return;
-        } else if (!Number.isNaN(latNumber) || !Number.isNaN(lonNumber)) {
+        } else if (Number.isNaN(latNumber) || Number.isNaN(lonNumber)) {
             swal({
                 title: "خطا",
                 text: "لطفا در فیلدها، فقط عدد وارد کنید!",
